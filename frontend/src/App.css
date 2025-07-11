@@ -301,14 +301,72 @@ html {
   animation: typewriter 3s steps(20, end), blink 0.5s step-end infinite;
 }
 
-/* Hover effects */
+/* Enhanced Hover effects */
 .hover-lift {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hover-tilt {
+  transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+  transform: rotate(2deg) scale(1.05);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(218, 255, 1, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hover-slide {
+  transition: transform 0.3s ease;
+}
+
+.hover-slide:hover {
+  transform: translateX(10px);
+}
+
+.hover-bounce {
+  transition: all 0.3s ease;
+}
+
+.hover-bounce:hover {
+  animation: bounce 0.6s ease;
+}
+
+.hover-rotate {
+  transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(360deg);
+}
+
+.hover-flip {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.hover-flip:hover {
+  transform: rotateY(180deg);
 }
 
 /* Glow effect */
