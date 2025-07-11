@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import Logo from './Logo';
 
-const Header = ({ darkMode, toggleDarkMode }) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -45,16 +45,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <button
-              onClick={toggleDarkMode}
-              className="p-3 rounded-xl bg-[rgb(26,28,30)] hover:bg-[rgb(38,40,42)] transition-all duration-300 hover:scale-110 group"
-            >
-              {darkMode ? (
-                <Sun className="w-5 h-5 text-[rgb(218,255,1)] group-hover:rotate-180 transition-transform duration-500" />
-              ) : (
-                <Moon className="w-5 h-5 text-[rgb(218,255,1)] group-hover:rotate-12 transition-transform duration-500" />
-              )}
-            </button>
             <Button
               onClick={() => scrollToSection('#contact')}
               className="bg-[rgb(218,255,1)] hover:bg-[rgb(166,190,21)] text-[rgb(17,17,19)] font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-[rgb(218,255,1)]/30 group"
@@ -66,16 +56,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-[rgb(26,28,30)] hover:bg-[rgb(38,40,42)] transition-all duration-300 hover:scale-110"
-            >
-              {darkMode ? (
-                <Sun className="w-5 h-5 text-[rgb(218,255,1)]" />
-              ) : (
-                <Moon className="w-5 h-5 text-[rgb(218,255,1)]" />
-              )}
-            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-lg bg-[rgb(26,28,30)] hover:bg-[rgb(38,40,42)] transition-all duration-300 hover:scale-110"

@@ -2,8 +2,8 @@
 export const mockData = {
   company: {
     name: "Crecita",
-    tagline: "Streamlining DevOps & MLOps for scalable, reliable solutions",
-    description: "We empower businesses to accelerate their digital transformation through cutting-edge DevOps and MLOps practices, delivering scalable, reliable, and efficient solutions.",
+    tagline: "Streamlining DevOps, MLOps, Data Analytics & Cybersecurity for scalable, reliable solutions",
+    description: "We empower businesses to accelerate their digital transformation through cutting-edge DevOps, MLOps, Data Analytics, and Cybersecurity practices, delivering scalable, reliable, and efficient solutions.",
     foundedYear: "2020",
     location: "Global",
     employees: "50+"
@@ -77,6 +77,74 @@ export const mockData = {
           features: ["Pipeline Automation", "Model Versioning", "Experiment Tracking"]
         }
       ]
+    },
+    dataAnalytics: {
+      title: "Data Analytics Services",
+      description: "Transform your data into actionable insights with advanced analytics and business intelligence",
+      items: [
+        {
+          id: 1,
+          title: "Data Visualization",
+          description: "Create compelling dashboards and reports with Power BI, Tableau, and custom visualization solutions for data-driven decision making.",
+          icon: "BarChart3",
+          features: ["Interactive Dashboards", "Real-time Reporting", "Custom Visualizations"]
+        },
+        {
+          id: 2,
+          title: "ETL Pipelines",
+          description: "Build robust data pipelines for extracting, transforming, and loading data from multiple sources into data warehouses.",
+          icon: "GitMerge",
+          features: ["Data Integration", "Automated Processing", "Quality Assurance"]
+        },
+        {
+          id: 3,
+          title: "Business Intelligence",
+          description: "Implement comprehensive BI solutions that provide deep insights into business performance and growth opportunities.",
+          icon: "TrendingUp",
+          features: ["KPI Tracking", "Predictive Analytics", "Performance Metrics"]
+        },
+        {
+          id: 4,
+          title: "Data Warehousing",
+          description: "Design and implement scalable data warehouse solutions using modern cloud platforms and technologies.",
+          icon: "Database",
+          features: ["Cloud Architecture", "Data Modeling", "Performance Optimization"]
+        }
+      ]
+    },
+    cybersecurity: {
+      title: "Cybersecurity Services",
+      description: "Protect your digital assets with comprehensive cybersecurity solutions and threat management",
+      items: [
+        {
+          id: 1,
+          title: "Security Assessment",
+          description: "Comprehensive security audits and vulnerability assessments to identify and mitigate potential threats and weaknesses.",
+          icon: "Shield",
+          features: ["Penetration Testing", "Vulnerability Scanning", "Risk Assessment"]
+        },
+        {
+          id: 2,
+          title: "Security Monitoring",
+          description: "24/7 security monitoring and incident response with SIEM solutions and advanced threat detection capabilities.",
+          icon: "Eye",
+          features: ["Real-time Monitoring", "Threat Detection", "Incident Response"]
+        },
+        {
+          id: 3,
+          title: "Compliance & Governance",
+          description: "Ensure compliance with industry standards like SOC 2, GDPR, HIPAA, and implement robust security governance frameworks.",
+          icon: "FileCheck",
+          features: ["Compliance Audits", "Policy Development", "Training Programs"]
+        },
+        {
+          id: 4,
+          title: "Security Architecture",
+          description: "Design and implement secure cloud and on-premise infrastructure with zero-trust security models and best practices.",
+          icon: "Lock",
+          features: ["Zero-Trust Architecture", "Secure Design", "Identity Management"]
+        }
+      ]
     }
   },
   
@@ -100,10 +168,10 @@ export const mockData = {
       metric: "cost reduction"
     },
     {
-      title: "Improved Product Quality",
-      description: "Achieve 99.9% uptime with comprehensive monitoring and automated testing",
+      title: "Improved Security",
+      description: "Achieve enterprise-grade security with comprehensive monitoring and threat detection",
       percentage: "99.9%",
-      metric: "uptime"
+      metric: "threat prevention"
     }
   ],
   
@@ -126,6 +194,22 @@ export const mockData = {
       { name: "TensorFlow Serving", category: "Model Deployment" },
       { name: "Apache Airflow", category: "Workflow Orchestration" }
     ],
+    dataAnalytics: [
+      { name: "Power BI", category: "Business Intelligence" },
+      { name: "Tableau", category: "Data Visualization" },
+      { name: "Apache Spark", category: "Big Data Processing" },
+      { name: "Snowflake", category: "Data Warehouse" },
+      { name: "Databricks", category: "Analytics Platform" },
+      { name: "Looker", category: "BI Platform" }
+    ],
+    cybersecurity: [
+      { name: "Splunk", category: "SIEM" },
+      { name: "CrowdStrike", category: "Endpoint Protection" },
+      { name: "Okta", category: "Identity Management" },
+      { name: "Nessus", category: "Vulnerability Scanner" },
+      { name: "Wireshark", category: "Network Analysis" },
+      { name: "Metasploit", category: "Penetration Testing" }
+    ],
     cloud: [
       { name: "AWS", category: "Cloud Platform" },
       { name: "Azure", category: "Cloud Platform" },
@@ -134,17 +218,17 @@ export const mockData = {
   },
   
   industries: [
-    { name: "Healthcare", icon: "Heart", description: "HIPAA-compliant ML solutions for medical diagnostics" },
-    { name: "Finance & FinTech", icon: "DollarSign", description: "Secure, scalable financial services infrastructure" },
-    { name: "eCommerce", icon: "ShoppingCart", description: "High-performance platforms for online retail" },
-    { name: "Manufacturing", icon: "Factory", description: "Industrial IoT and predictive maintenance solutions" },
-    { name: "Telecom", icon: "Phone", description: "Network optimization and customer analytics" },
-    { name: "Retail", icon: "Store", description: "Inventory management and personalization engines" },
-    { name: "Energy", icon: "Zap", description: "Smart grid and renewable energy optimization" },
-    { name: "Automotive", icon: "Car", description: "Connected vehicle and autonomous driving systems" },
-    { name: "Logistics", icon: "Truck", description: "Supply chain optimization and route planning" },
-    { name: "Government", icon: "Shield", description: "Secure, compliant digital transformation solutions" },
-    { name: "Education", icon: "GraduationCap", description: "EdTech platforms and learning analytics" }
+    { name: "Healthcare", icon: "Heart", description: "HIPAA-compliant ML solutions for medical diagnostics and secure data analytics" },
+    { name: "Finance & FinTech", icon: "DollarSign", description: "Secure, scalable financial services infrastructure with advanced fraud detection" },
+    { name: "eCommerce", icon: "ShoppingCart", description: "High-performance platforms with personalized analytics and security monitoring" },
+    { name: "Manufacturing", icon: "Factory", description: "Industrial IoT, predictive maintenance solutions, and operational analytics" },
+    { name: "Telecom", icon: "Phone", description: "Network optimization, customer analytics, and cybersecurity solutions" },
+    { name: "Retail", icon: "Store", description: "Inventory management, personalization engines, and customer data protection" },
+    { name: "Energy", icon: "Zap", description: "Smart grid optimization, renewable energy analytics, and infrastructure security" },
+    { name: "Automotive", icon: "Car", description: "Connected vehicle systems, autonomous driving data, and automotive cybersecurity" },
+    { name: "Logistics", icon: "Truck", description: "Supply chain optimization, route planning analytics, and cargo security" },
+    { name: "Government", icon: "Shield", description: "Secure, compliant digital transformation with advanced threat protection" },
+    { name: "Education", icon: "GraduationCap", description: "EdTech platforms, learning analytics, and student data security" }
   ],
   
   testimonials: [
@@ -153,7 +237,7 @@ export const mockData = {
       name: "Sarah Johnson",
       role: "CTO",
       company: "TechCorp",
-      content: "Crecita transformed our deployment process. We went from monthly releases to daily deployments with zero downtime. Their expertise in Kubernetes and CI/CD is unmatched.",
+      content: "Crecita transformed our deployment process and enhanced our security posture. We went from monthly releases to daily deployments with zero security incidents.",
       rating: 5,
       image: "/api/placeholder/64/64"
     },
@@ -162,7 +246,7 @@ export const mockData = {
       name: "Michael Chen",
       role: "VP Engineering",
       company: "DataFlow Inc",
-      content: "The MLOps infrastructure Crecita built for us handles our ML models at scale. Model deployment time reduced from days to minutes. Exceptional work!",
+      content: "The MLOps infrastructure and data analytics platform Crecita built for us handles our ML models at scale with comprehensive monitoring and insights.",
       rating: 5,
       image: "/api/placeholder/64/64"
     },
@@ -171,7 +255,7 @@ export const mockData = {
       name: "Emily Rodriguez",
       role: "Head of Platform",
       company: "CloudTech Solutions",
-      content: "Working with Crecita has been a game-changer. Their DevOps expertise helped us achieve 99.9% uptime and reduce infrastructure costs by 40%. Highly recommended!",
+      content: "Working with Crecita has been a game-changer. Their DevOps expertise and cybersecurity solutions helped us achieve 99.9% uptime with enterprise-grade security.",
       rating: 5,
       image: "/api/placeholder/64/64"
     }
@@ -182,7 +266,7 @@ export const mockData = {
       id: 1,
       name: "Alex Thompson",
       role: "CEO & Founder",
-      bio: "15+ years in DevOps and cloud architecture. Former AWS Solutions Architect.",
+      bio: "15+ years in DevOps and cloud architecture. Former AWS Solutions Architect with expertise in cybersecurity.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       github: "#"
@@ -190,8 +274,8 @@ export const mockData = {
     {
       id: 2,
       name: "Dr. Priya Patel",
-      role: "Head of MLOps",
-      bio: "PhD in Machine Learning, expert in production ML systems and model deployment.",
+      role: "Head of MLOps & Data Analytics",
+      bio: "PhD in Machine Learning, expert in production ML systems, data science, and advanced analytics platforms.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       github: "#"
@@ -200,7 +284,7 @@ export const mockData = {
       id: 3,
       name: "David Kim",
       role: "Senior DevOps Engineer",
-      bio: "Kubernetes expert with deep experience in microservices and container orchestration.",
+      bio: "Kubernetes expert with deep experience in microservices, container orchestration, and infrastructure security.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       github: "#"
@@ -208,8 +292,8 @@ export const mockData = {
     {
       id: 4,
       name: "Lisa Wang",
-      role: "Cloud Architect",
-      bio: "Multi-cloud expert specializing in AWS, Azure, and GCP infrastructure design.",
+      role: "Cybersecurity Architect",
+      bio: "Multi-cloud security expert specializing in zero-trust architecture, threat detection, and compliance frameworks.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       github: "#"
@@ -220,13 +304,13 @@ export const mockData = {
     { label: "Projects Delivered", value: "500+", icon: "CheckCircle" },
     { label: "Happy Clients", value: "200+", icon: "Users" },
     { label: "Years Experience", value: "15+", icon: "Clock" },
-    { label: "Uptime Achieved", value: "99.9%", icon: "Shield" }
+    { label: "Security Incidents Prevented", value: "10K+", icon: "Shield" }
   ],
   
   contact: {
-    email: "hello@crecita.com",
+    email: "contact@crecita.com",
     phone: "+1 (555) 123-4567",
-    address: "123 Tech Hub, San Francisco, CA 94105",
+    address: "Global Remote Team",
     hours: "Mon-Fri: 9AM-6PM PST"
   }
 };

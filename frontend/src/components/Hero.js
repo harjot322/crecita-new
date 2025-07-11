@@ -31,32 +31,27 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto">
           {/* Main Hero Content */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-[rgb(26,28,30)] px-4 py-2 rounded-full mb-8 border border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-500 hover:scale-105 group">
+            <div className="inline-flex items-center space-x-2 bg-[rgb(26,28,30)]/90 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-500 hover:scale-105 group">
               <CheckCircle className="w-4 h-4 text-[rgb(218,255,1)] group-hover:rotate-180 transition-transform duration-500" />
               <span className="text-[rgb(218,218,218)] text-sm font-medium">Trusted by 200+ Companies</span>
               <Sparkles className="w-4 h-4 text-[rgb(218,255,1)] animate-pulse" />
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fadeInUp">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fadeInUp drop-shadow-2xl">
               <span className="inline-block hover:scale-110 transition-transform duration-300">Streamlining</span>
               <br />
-              <span className="text-[rgb(218,255,1)] relative inline-block hover:scale-110 transition-transform duration-300">
-                DevOps
+              <span className="text-[rgb(218,255,1)] relative inline-block hover:scale-110 transition-transform duration-300 drop-shadow-lg">
+                DevOps, MLOps & Security
                 <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[rgb(218,255,1)] to-[rgb(166,190,21)] opacity-50 rounded-full animate-pulse"></div>
-              </span>
-              {' '}&{' '}
-              <span className="text-[rgb(218,255,1)] relative inline-block hover:scale-110 transition-transform duration-300">
-                MLOps
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[rgb(218,255,1)] to-[rgb(166,190,21)] opacity-50 rounded-full animate-pulse animation-delay-500"></div>
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-[rgb(218,218,218)] mb-8 max-w-4xl mx-auto leading-relaxed animate-fadeInUp animation-delay-200">
+            <p className="text-xl md:text-2xl text-white font-medium mb-8 max-w-4xl mx-auto leading-relaxed animate-fadeInUp animation-delay-200 drop-shadow-lg bg-[rgb(17,17,19)]/30 backdrop-blur-sm rounded-lg px-6 py-3">
               {company.tagline}
             </p>
             
-            <p className="text-lg text-[rgb(161,161,170)] mb-12 max-w-3xl mx-auto animate-fadeInUp animation-delay-400">
-              We empower businesses to accelerate their digital transformation through cutting-edge DevOps and MLOps practices, 
+            <p className="text-lg text-[rgb(230,230,240)] mb-12 max-w-3xl mx-auto animate-fadeInUp animation-delay-400 bg-[rgb(17,17,19)]/50 backdrop-blur-sm rounded-lg px-6 py-4 drop-shadow-md">
+              We empower businesses to accelerate their digital transformation through cutting-edge DevOps, MLOps, Data Analytics, and Cybersecurity practices, 
               delivering scalable, reliable, and efficient solutions that drive innovation.
             </p>
 
@@ -76,7 +71,7 @@ const Hero = () => {
               <Button
                 onClick={() => scrollToSection('#about')}
                 variant="outline"
-                className="border-2 border-[rgb(63,63,63)] text-white hover:border-[rgb(218,255,1)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)]/5 font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[rgb(218,255,1)]/20 group relative overflow-hidden"
+                className="border-2 border-[rgb(218,255,1)]/50 bg-[rgb(17,17,19)]/70 backdrop-blur-sm text-white hover:border-[rgb(218,255,1)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)]/10 font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[rgb(218,255,1)]/20 group relative overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
                   <Play className="mr-2 w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
@@ -93,11 +88,11 @@ const Hero = () => {
               const IconComponent = { CheckCircle, Users, Clock, Shield }[stat.icon];
               return (
                 <div key={index} className="text-center group animate-fadeInUp" style={{ animationDelay: `${800 + index * 100}ms` }}>
-                  <div className="bg-gradient-to-br from-[rgb(26,28,30)] to-[rgb(38,40,42)] p-6 rounded-2xl border border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-500 hover:transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-[rgb(218,255,1)]/20 group-hover:scale-105 relative overflow-hidden">
+                  <div className="bg-gradient-to-br from-[rgb(26,28,30)]/90 to-[rgb(38,40,42)]/90 backdrop-blur-sm p-6 rounded-2xl border border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-500 hover:transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-[rgb(218,255,1)]/20 group-hover:scale-105 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[rgb(218,255,1)] to-[rgb(166,190,21)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <IconComponent className="w-8 h-8 text-[rgb(218,255,1)] mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
                     <div className="text-3xl font-bold text-white mb-2 group-hover:text-[rgb(218,255,1)] transition-colors duration-300">{stat.value}</div>
-                    <div className="text-[rgb(161,161,170)] text-sm font-medium group-hover:text-[rgb(218,218,218)] transition-colors duration-300">{stat.label}</div>
+                    <div className="text-[rgb(200,200,210)] text-sm font-medium group-hover:text-[rgb(218,218,218)] transition-colors duration-300">{stat.label}</div>
                   </div>
                 </div>
               );
@@ -106,11 +101,11 @@ const Hero = () => {
 
           {/* Enhanced Trust Indicators */}
           <div className="text-center animate-fadeInUp animation-delay-1200">
-            <p className="text-[rgb(161,161,170)] mb-8 font-medium">Trusted by industry leaders worldwide</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <p className="text-[rgb(200,200,210)] mb-8 font-medium bg-[rgb(17,17,19)]/50 backdrop-blur-sm rounded-lg px-4 py-2 inline-block">Trusted by industry leaders worldwide</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
               {['AWS', 'Microsoft Azure', 'Google Cloud', 'Docker', 'Kubernetes'].map((tech, index) => (
-                <div key={index} className="bg-[rgb(26,28,30)] px-6 py-3 rounded-lg border border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-lg hover:shadow-[rgb(218,255,1)]/20 group">
-                  <span className="text-[rgb(218,218,218)] font-semibold group-hover:text-[rgb(218,255,1)] transition-colors duration-300">{tech}</span>
+                <div key={index} className="bg-[rgb(26,28,30)]/80 backdrop-blur-sm px-6 py-3 rounded-lg border border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-lg hover:shadow-[rgb(218,255,1)]/20 group">
+                  <span className="text-[rgb(230,230,240)] font-semibold group-hover:text-[rgb(218,255,1)] transition-colors duration-300">{tech}</span>
                 </div>
               ))}
             </div>

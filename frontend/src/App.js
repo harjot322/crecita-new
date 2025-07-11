@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
@@ -14,31 +14,6 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const Home = () => {
-  const [darkMode, setDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    // Apply dark mode to document
-    if (!darkMode) {
-      document.documentElement.classList.add('dark');
-      document.body.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.body.classList.remove('dark');
-    }
-  };
-
-  // Initialize dark mode on component mount
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      document.body.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.body.classList.remove('dark');
-    }
-  }, [darkMode]);
-
   // Test backend connection
   const helloWorldApi = async () => {
     try {
@@ -54,8 +29,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen transition-all duration-500 ${darkMode ? 'dark bg-[rgb(17,17,19)]' : 'bg-white'}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <div className="min-h-screen bg-[rgb(17,17,19)]">
+      <Header />
       <Hero />
       <Services />
       <Industries />
