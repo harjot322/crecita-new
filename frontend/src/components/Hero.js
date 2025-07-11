@@ -46,11 +46,11 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white font-medium mb-8 max-w-4xl mx-auto leading-relaxed animate-fadeInUp animation-delay-200 drop-shadow-lg bg-[rgb(17,17,19)]/30 backdrop-blur-sm rounded-lg px-6 py-3">
+            <p className="text-xl md:text-2xl text-white font-medium mb-8 max-w-4xl mx-auto leading-relaxed animate-fadeInUp animation-delay-200 drop-shadow-lg">
               {company.tagline}
             </p>
             
-            <p className="text-lg text-[rgb(230,230,240)] mb-12 max-w-3xl mx-auto animate-fadeInUp animation-delay-400 bg-[rgb(17,17,19)]/50 backdrop-blur-sm rounded-lg px-6 py-4 drop-shadow-md">
+            <p className="text-lg text-[rgb(230,230,240)] mb-12 max-w-3xl mx-auto animate-fadeInUp animation-delay-400 drop-shadow-md">
               We empower businesses to accelerate their digital transformation through cutting-edge DevOps, MLOps, Data Analytics, and Cybersecurity practices, 
               delivering scalable, reliable, and efficient solutions that drive innovation.
             </p>
