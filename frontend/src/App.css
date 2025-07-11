@@ -252,7 +252,7 @@ html {
 .animation-delay-1500 { animation-delay: 1500ms; }
 .animation-delay-2000 { animation-delay: 2000ms; }
 
-/* Utility classes */
+/* Enhanced Utility classes */
 .animate-fadeInUp {
   animation: fadeInUp 0.6s ease-out;
 }
@@ -267,6 +267,38 @@ html {
 
 .animate-slideInFromRight {
   animation: slideInFromRight 0.6s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-typewriter {
+  animation: typewriter 3s steps(20, end), blink 0.5s step-end infinite;
 }
 
 /* Hover effects */
