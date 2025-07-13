@@ -75,7 +75,7 @@ const Hero = () => {
               >
                 <span className="relative z-10 flex items-center">
                   <Play className="mr-2 w-5 h-5 group-hover:scale-125 transition-transform duration-300" />
-                  Watch Demo
+                  Contact Us
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[rgb(218,255,1)]/10 to-[rgb(166,190,21)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>

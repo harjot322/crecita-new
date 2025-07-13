@@ -234,16 +234,16 @@ export const mockData = {
   testimonials: [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "CTO",
-      company: "TechCorp",
+      name: "Shahzad Ahmed",
+      role: "Range VC",
+      company: "BettrData",
       content: "Crecita transformed our deployment process and enhanced our security posture. We went from monthly releases to daily deployments with zero security incidents.",
       rating: 5,
       image: "/api/placeholder/64/64"
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Thomas DePoint",
       role: "VP Engineering",
       company: "DataFlow Inc",
       content: "The MLOps infrastructure and data analytics platform Crecita built for us handles our ML models at scale with comprehensive monitoring and insights.",
@@ -261,44 +261,6 @@ export const mockData = {
     }
   ],
   
-  team: [
-    {
-      id: 1,
-      name: "Avesh Tanwar",
-      role: "CEO & Founder",
-      bio: "15+ years in DevOps and cloud architecture. Former AWS Solutions Architect with expertise in cybersecurity.",
-      image: "/api/placeholder/300/300",
-      linkedin: "#",
-      github: "#"
-    },
-    {
-      id: 2,
-      name: "Harjot Makkar",
-      role: "Cloud-SRE",
-      bio: "Expert in production systems, monitoring, and advanced SLI.",
-      image: "/api/placeholder/300/300",
-      linkedin: "#",
-      github: "#"
-    },
-    {
-      id: 3,
-      name: "David Kim",
-      role: "Senior DevOps Engineer",
-      bio: "Kubernetes expert with deep experience in microservices, container orchestration, and infrastructure security.",
-      image: "/api/placeholder/300/300",
-      linkedin: "#",
-      github: "#"
-    },
-    {
-      id: 4,
-      name: "Ajay Gondukupe",
-      role: "Cybersecurity Architect",
-      bio: "Multi-cloud security expert specializing in zero-trust architecture, threat detection, and compliance frameworks.",
-      image: "/api/placeholder/300/300",
-      linkedin: "#",
-      github: "#"
-    }
-  ],
   
   stats: [
     { label: "Projects Delivered", value: "500+", icon: "CheckCircle" },
@@ -308,9 +270,9 @@ export const mockData = {
   ],
   
   contact: {
-    email: "contact@crecita.com",
-    phone: "+1 (555) 123-4567",
+    email: "avesh@edera.in",
+    phone: "+91 9096451662",
     address: "Global Remote Team",
-    hours: "Mon-Fri: 9AM-6PM PST"
+    hours: "Mon-Fri: 6AM-6AM UTC"
   }
 };

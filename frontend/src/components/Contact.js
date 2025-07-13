@@ -1,9 +1,17 @@
+/* frontend/src/components/Contact.jsx */
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from './ui/card';
 import { mockData } from '../mockData';
 
 const Contact = () => {
@@ -11,7 +19,7 @@ const Contact = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -21,21 +29,32 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
+    // 👉 build the URL the CRA-way
+    const base =
+      process.env.REACT_APP_API_BASE?.trim() || ''; // '' keeps it relative if unset
+    try {
+      await axios.post(
+        `${base}/api/contact`,
+        formData,
+        { headers: { 'Content-Type': 'application/json' } },
+      );
+    } catch (err) {
+      console.error('Contact form submission failed:', err);
+    }
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', company: '', message: '' });
-      
-      // Reset success message after 3 seconds
+
       setTimeout(() => setIsSubmitted(false), 3000);
     }, 1000);
   };
@@ -46,19 +65,22 @@ const Contact = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-[rgb(17,17,19)] px-4 py-2 rounded-full mb-8 border border-[rgb(63,63,63)]">
             <span className="w-2 h-2 bg-[rgb(218,255,1)] rounded-full"></span>
-            <span className="text-[rgb(218,218,218)] text-sm font-medium">Get In Touch</span>
+            <span className="text-[rgb(218,218,218)] text-sm font-medium">
+              Get In Touch
+            </span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ready to
             <span className="text-[rgb(218,255,1)]"> Transform</span>
             <br />
             Your Business?
           </h2>
-          
+
           <p className="text-xl text-[rgb(161,161,170)] max-w-3xl mx-auto">
-            Let's discuss how we can help you accelerate your DevOps and MLOps journey. 
-            Our experts are ready to design a solution tailored to your specific needs.
+            Let's discuss how we can help you accelerate your DevOps and MLOps
+            journey. Our experts are ready to design a solution tailored to your
+            specific needs.
           </p>
         </div>
 
@@ -66,16 +88,22 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="bg-[rgb(17,17,19)] border-[rgb(63,63,63)]">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-white">Send Us a Message</CardTitle>
+              <CardTitle className="text-2xl font-bold text-white">
+                Send Us a Message
+              </CardTitle>
               <CardDescription className="text-[rgb(161,161,170)]">
-                Fill out the form below and we'll get back to you within 24 hours
+                Fill out the form below and we'll get back to you within 24
+                hours
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-[rgb(218,218,218)] font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-[rgb(218,218,218)] font-medium mb-2"
+                    >
                       Full Name *
                     </label>
                     <Input
@@ -89,7 +117,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-[rgb(218,218,218)] font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-[rgb(218,218,218)] font-medium mb-2"
+                    >
                       Email Address *
                     </label>
                     <Input
@@ -104,9 +135,12 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="company" className="block text-[rgb(218,218,218)] font-medium mb-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-[rgb(218,218,218)] font-medium mb-2"
+                  >
                     Company Name
                   </label>
                   <Input
@@ -118,9 +152,12 @@ const Contact = () => {
                     className="bg-[rgb(26,28,30)] border-[rgb(63,63,63)] text-white placeholder-[rgb(161,161,170)] focus:border-[rgb(218,255,1)]"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-[rgb(218,218,218)] font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-[rgb(218,218,218)] font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -134,7 +171,7 @@ const Contact = () => {
                     className="bg-[rgb(26,28,30)] border-[rgb(63,63,63)] text-white placeholder-[rgb(161,161,170)] focus:border-[rgb(218,255,1)]"
                   />
                 </div>
-                
+
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -166,7 +203,9 @@ const Contact = () => {
             {/* Contact Details */}
             <Card className="bg-[rgb(17,17,19)] border-[rgb(63,63,63)]">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-white">Contact Information</CardTitle>
+                <CardTitle className="text-2xl font-bold text-white">
+                  Contact Information
+                </CardTitle>
                 <CardDescription className="text-[rgb(161,161,170)]">
                   Reach out to us through any of these channels
                 </CardDescription>
@@ -179,10 +218,12 @@ const Contact = () => {
                   <div>
                     <h4 className="text-white font-semibold mb-1">Email</h4>
                     <p className="text-[rgb(161,161,170)]">{contact.email}</p>
-                    <p className="text-[rgb(161,161,170)] text-sm">We'll respond within 24 hours</p>
+                    <p className="text-[rgb(161,161,170)] text-sm">
+                      We'll respond within 24 hours
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[rgb(218,255,1)]/10 rounded-xl flex items-center justify-center">
                     <Phone className="w-6 h-6 text-[rgb(218,255,1)]" />
@@ -190,10 +231,12 @@ const Contact = () => {
                   <div>
                     <h4 className="text-white font-semibold mb-1">Phone</h4>
                     <p className="text-[rgb(161,161,170)]">{contact.phone}</p>
-                    <p className="text-[rgb(161,161,170)] text-sm">{contact.hours}</p>
+                    <p className="text-[rgb(161,161,170)] text-sm">
+                      {contact.hours}
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[rgb(218,255,1)]/10 rounded-xl flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-[rgb(218,255,1)]" />
@@ -201,7 +244,9 @@ const Contact = () => {
                   <div>
                     <h4 className="text-white font-semibold mb-1">Address</h4>
                     <p className="text-[rgb(161,161,170)]">{contact.address}</p>
-                    <p className="text-[rgb(161,161,170)] text-sm">Visit us for in-person consultation</p>
+                    <p className="text-[rgb(161,161,170)] text-sm">
+                      Visit us for in-person consultation
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -210,21 +255,29 @@ const Contact = () => {
             {/* Quick Response */}
             <Card className="bg-[rgb(17,17,19)] border-[rgb(63,63,63)]">
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-white">Quick Response Guaranteed</CardTitle>
+                <CardTitle className="text-xl font-bold text-white">
+                  Quick Response Guaranteed
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-[rgb(218,255,1)]" />
-                    <span className="text-[rgb(161,161,170)]">Initial response within 2 hours</span>
+                    <span className="text-[rgb(161,161,170)]">
+                      Initial response within 2 hours
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-[rgb(218,255,1)]" />
-                    <span className="text-[rgb(161,161,170)]">Detailed proposal within 24 hours</span>
+                    <span className="text-[rgb(161,161,170)]">
+                      Detailed proposal within 24 hours
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-[rgb(218,255,1)]" />
-                    <span className="text-[rgb(161,161,170)]">Free consultation call scheduled</span>
+                    <span className="text-[rgb(161,161,170)]">
+                      Free consultation call scheduled
+                    </span>
                   </div>
                 </div>
               </CardContent>
