@@ -83,7 +83,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder="Richard Johnson"
                       required
                       className="bg-[rgb(26,28,30)] border-[rgb(63,63,63)] text-white placeholder-[rgb(161,161,170)] focus:border-[rgb(218,255,1)]"
                     />

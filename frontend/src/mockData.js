@@ -264,7 +264,7 @@ export const mockData = {
   team: [
     {
       id: 1,
-      name: "Alex Thompson",
+      name: "Avesh Tanwar",
       role: "CEO & Founder",
       bio: "15+ years in DevOps and cloud architecture. Former AWS Solutions Architect with expertise in cybersecurity.",
       image: "/api/placeholder/300/300",
@@ -273,9 +273,9 @@ export const mockData = {
     },
     {
       id: 2,
-      name: "Dr. Priya Patel",
-      role: "Head of MLOps & Data Analytics",
-      bio: "PhD in Machine Learning, expert in production ML systems, data science, and advanced analytics platforms.",
+      name: "Harjot Makkar",
+      role: "Cloud-SRE",
+      bio: "Expert in production systems, monitoring, and advanced SLI.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       github: "#"
@@ -291,7 +291,7 @@ export const mockData = {
     },
     {
       id: 4,
-      name: "Lisa Wang",
+      name: "Ajay Gondukupe",
       role: "Cybersecurity Architect",
       bio: "Multi-cloud security expert specializing in zero-trust architecture, threat detection, and compliance frameworks.",
       image: "/api/placeholder/300/300",

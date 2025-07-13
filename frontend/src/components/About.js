@@ -41,41 +41,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Team Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Leadership Team</h3>
-            <p className="text-lg text-[rgb(200,200,210)] max-w-2xl mx-auto">
-              Industry veterans who've scaled systems for millions of users
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <Card key={member.id} className="bg-gradient-to-br from-[rgb(26,28,30)]/90 to-[rgb(38,40,42)]/90 backdrop-blur-sm border-[rgb(63,63,63)] hover:border-[rgb(218,255,1)] transition-all duration-300 hover:transform hover:-translate-y-2 group">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-24 h-24 bg-[rgb(38,40,42)] rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-[rgb(218,255,1)]/10 transition-colors">
-                    <Users className="w-12 h-12 text-[rgb(218,255,1)]" />
-                  </div>
-                  <CardTitle className="text-white text-xl font-semibold">{member.name}</CardTitle>
-                  <CardDescription className="text-[rgb(218,255,1)] font-medium">{member.role}</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-[rgb(180,180,190)] mb-4 text-sm leading-relaxed">{member.bio}</p>
-                  <div className="flex justify-center space-x-3">
-                    <a href={member.linkedin} className="w-8 h-8 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200">
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                    <a href={member.github} className="w-8 h-8 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200">
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* Testimonials Section */}
         <div className="mb-20">
           <div className="text-center mb-12">

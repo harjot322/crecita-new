@@ -31,12 +31,6 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/crecita" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[rgb(38,40,42)] rounded-xl flex items-center justify-center text-[rgb(161,161,170)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-300 hover:transform hover:-translate-y-1 hover:scale-110 group">
                 <Linkedin className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               </a>
-              <a href="https://github.com/crecita" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[rgb(38,40,42)] rounded-xl flex items-center justify-center text-[rgb(161,161,170)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-300 hover:transform hover:-translate-y-1 hover:scale-110 group">
-                <Github className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-              </a>
-              <a href="https://twitter.com/crecita" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[rgb(38,40,42)] rounded-xl flex items-center justify-center text-[rgb(161,161,170)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-300 hover:transform hover:-translate-y-1 hover:scale-110 group">
-                <Twitter className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-              </a>
             </div>
           </div>
 
@@ -82,7 +76,7 @@ const Footer = () => {
                 <div>
                   <p className="text-[rgb(161,161,170)] text-sm">Email</p>
                   <a href="mailto:contact@crecita.com" className="text-white hover:text-[rgb(218,255,1)] transition-colors duration-300">
-                    contact@crecita.com
+                    avesh@edera.in
                   </a>
                 </div>
               </div>
@@ -93,7 +87,7 @@ const Footer = () => {
                 <div>
                   <p className="text-[rgb(161,161,170)] text-sm">Phone</p>
                   <a href="tel:+1-555-123-4567" className="text-white hover:text-[rgb(218,255,1)] transition-colors duration-300">
-                    +1 (555) 123-4567
+                    +91 9096451662
                   </a>
                 </div>
               </div>
@@ -106,35 +100,6 @@ const Footer = () => {
                   <p className="text-white">Global Remote Team</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-[rgb(63,63,63)] pt-8 animate-fadeInUp animation-delay-600">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-[rgb(161,161,170)] text-center md:text-left">
-              © 2024 Crecita. All rights reserved. Built with ❤️ for the DevOps community.
-            </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] transition-all duration-300 hover:translate-y-1 group">
-                <span className="relative">
-                  Privacy Policy
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[rgb(218,255,1)] transition-all duration-300 group-hover:w-full"></span>
-                </span>
-              </a>
-              <a href="#" className="text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] transition-all duration-300 hover:translate-y-1 group">
-                <span className="relative">
-                  Terms of Service
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[rgb(218,255,1)] transition-all duration-300 group-hover:w-full"></span>
-                </span>
-              </a>
-              <a href="#" className="text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] transition-all duration-300 hover:translate-y-1 group">
-                <span className="relative">
-                  Cookie Policy
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[rgb(218,255,1)] transition-all duration-300 group-hover:w-full"></span>
-                </span>
-              </a>
             </div>
           </div>
         </div>
